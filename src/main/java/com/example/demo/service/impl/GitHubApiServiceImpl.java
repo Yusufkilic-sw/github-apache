@@ -6,13 +6,13 @@ import com.example.demo.dto.GitHubRepoDto;
 import com.example.demo.dto.GitHubUserDto;
 import com.example.demo.service.GitHubApiService;
 import com.example.demo.util.AppLogger;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.lang.reflect.Type;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -22,7 +22,6 @@ import java.util.List;
 public class GitHubApiServiceImpl implements GitHubApiService {
 
     private final RestTemplate restTemplate;
-    private final Gson gson;
     
     /**
      * Belirtilen organizasyonun son güncellenen 100 repository'sini getirir
@@ -35,13 +34,16 @@ public class GitHubApiServiceImpl implements GitHubApiService {
             );
             AppLogger.LOGGER.info("Fetching repositories from: " + url);
             
-            String response = restTemplate.getForObject(url, String.class);
-            
-            Type listType = new TypeToken<List<GitHubRepoDto>>() {}.getType();
-            List<GitHubRepoDto> repos = gson.fromJson(response, listType);
-            
-            AppLogger.LOGGER.info("Retrieved " + (repos != null ? repos.size() : 0) + " repositories");
-            return repos != null ? repos : List.of();
+                ResponseEntity<List<GitHubRepoDto>> response = restTemplate.exchange(
+                    url,
+                    HttpMethod.GET,
+                    null,
+                    new ParameterizedTypeReference<List<GitHubRepoDto>>() {}
+                );
+                List<GitHubRepoDto> repos = response.getBody();
+
+                AppLogger.LOGGER.info("Retrieved " + (repos != null ? repos.size() : 0) + " repositories");
+                return repos != null ? repos : List.of();
         } catch (Exception e) {
             AppLogger.LOGGER.severe("Error fetching repositories: " + e.getMessage());
             return List.of();
@@ -63,10 +65,14 @@ public class GitHubApiServiceImpl implements GitHubApiService {
             );
             AppLogger.LOGGER.info("Fetching contributors first page from: " + url);
 
-            String response = restTemplate.getForObject(url, String.class);
-            Type listType = new TypeToken<List<GitHubContributorDto>>() {}.getType();
-            List<GitHubContributorDto> list = gson.fromJson(response, listType);
-            return list != null ? list : List.of();
+                ResponseEntity<List<GitHubContributorDto>> response = restTemplate.exchange(
+                    url,
+                    HttpMethod.GET,
+                    null,
+                    new ParameterizedTypeReference<List<GitHubContributorDto>>() {}
+                );
+                List<GitHubContributorDto> list = response.getBody();
+                return list != null ? list : List.of();
         } catch (Exception e) {
             AppLogger.LOGGER.severe("Error fetching contributors for " + repoName + ": " + e.getMessage());
             return List.of();
@@ -82,9 +88,8 @@ public class GitHubApiServiceImpl implements GitHubApiService {
             String url = String.format("%s/users/%s", GitHubConstants.BASE_URL, encodedUser);
             AppLogger.LOGGER.info("Fetching user details from: " + url);
             
-            String response = restTemplate.getForObject(url, String.class);
-            GitHubUserDto user = gson.fromJson(response, GitHubUserDto.class);
-            
+            GitHubUserDto user = restTemplate.getForObject(url, GitHubUserDto.class);
+
             AppLogger.LOGGER.info("Retrieved user details for: " + username);
             return user;
         } catch (Exception e) {

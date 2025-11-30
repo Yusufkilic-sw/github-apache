@@ -5,6 +5,8 @@ import com.example.demo.dto.GitHubRepoDto;
 import com.example.demo.dto.GitHubUserDto;
 import com.example.demo.entity.ContributorEntity;
 import com.example.demo.entity.RepositoryEntity;
+import com.example.demo.mapper.ContributorMapper;
+import com.example.demo.mapper.RepositoryMapper;
 import com.example.demo.service.ContributorService;
 import com.example.demo.service.DataProcessingService;
 import com.example.demo.service.GitHubApiService;
@@ -24,6 +26,8 @@ public class DataProcessingServiceImpl implements DataProcessingService {
     private final GitHubApiService githubApiService;
     private final RepositoryService repositoryService;
     private final ContributorService contributorService;
+    private final RepositoryMapper repositoryMapper;
+    private final ContributorMapper contributorMapper;
 
     @Transactional
     public void processApacheRepositories() {
@@ -41,22 +45,9 @@ public class DataProcessingServiceImpl implements DataProcessingService {
                 .toList();
 
         for (GitHubRepoDto repoDto : topRepos) {
-            RepositoryEntity repo = new RepositoryEntity();
+
+            RepositoryEntity repo = repositoryMapper.toEntity(repoDto);
             repo.setId(repoDto.getId());
-            repo.setName(repoDto.getName());
-            repo.setStargazerCount(repoDto.getStargazersCount());
-            repo.setWatchersCount(repoDto.getWatchersCount());
-            repo.setLanguage(repoDto.getLanguage());
-            repo.setOpenIssuesCount(repoDto.getOpenIssuesCount());
-            repo.setUrl(repoDto.getUrl());
-            repo.setDescription(repoDto.getDescription());
-            if (repoDto.getLicense() != null) {
-                repo.setLicenseKey(repoDto.getLicense().getKey());
-                repo.setLicenseName(repoDto.getLicense().getName());
-                repo.setLicenseSpdxId(repoDto.getLicense().getSpdxId());
-                repo.setLicenseUrl(repoDto.getLicense().getUrl());
-                repo.setLicenseNodeId(repoDto.getLicense().getNodeId());
-            }
             repositoryService.saveRepository(repo);
 
             // Fetch all contributors from GitHub and then pick top 10 locally
@@ -67,18 +58,9 @@ public class DataProcessingServiceImpl implements DataProcessingService {
                     .toList();
 
             for (GitHubContributorDto contribDto : top10) {
-                GitHubUserDto userDto = githubApiService.getUserDetails(contribDto.getLogin());
-
-                ContributorEntity contributor = new ContributorEntity();
-                contributor.setRepositoryName(repo.getName());
-                contributor.setUsername(contribDto.getLogin());
-                contributor.setContributions(contribDto.getContributions());
-                contributor.setProfileUrl(contribDto.getUrl());
-                contributor.setAvatarUrl(contribDto.getAvatarUrl());
-                if (userDto != null) {
-                    contributor.setLocation(userDto.getLocation());
-                    contributor.setCompany(userDto.getCompany());
-                }
+                
+                GitHubUserDto userDto = githubApiService.getUserDetails(contribDto.getLogin());        
+                ContributorEntity contributor = contributorMapper.toEntity(contribDto, userDto, repo.getName());
                 contributorService.saveContributor(contributor);
             }
         }
