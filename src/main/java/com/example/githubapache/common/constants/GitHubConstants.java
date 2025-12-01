@@ -1,4 +1,4 @@
-package com.example.common.constants;
+package com.example.githubapache.common.constants;
 
 /**
  * Global constants for GitHub API usage.

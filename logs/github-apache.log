@@ -308,3 +308,1334 @@ org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found 
 2025-12-01 00:40:48.913 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
 2025-12-01 00:40:48.914 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
 2025-12-01 00:40:48.915 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&sort=updated&direction=desc
+2025-12-01 00:58:50.483 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 3288 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-01 00:58:50.485 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-01 00:58:50.486 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-01 00:58:52.918 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-01 00:58:52.920 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-01 00:58:52.921 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-01 00:58:52.995 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-01 00:58:53.183 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-01 00:58:54.159 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-01 00:58:54.304 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-01 00:58:54.306 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-01 00:58:54.324 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-01 00:58:56.432 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01 00:58:58.045 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-01 00:58:58.074 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 8.081 seconds (process running for 8.505)
+2025-12-01 00:58:58.121 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-01 00:58:58.122 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-01 00:58:58.122 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-01 00:58:58.132 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-01 00:58:58.133 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&sort=updated&direction=desc
+2025-12-01 00:58:59.929 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 repositories
+2025-12-01 00:58:59.932 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-01 00:59:00.027 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: superset
+2025-12-01 00:59:00.343 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 contributors for repository: superset
+2025-12-01 00:59:00.344 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-01 00:59:00.500 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 00:59:00.501 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 00:59:00.523 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-01 00:59:00.676 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - User not found: dependabot[bot]
+2025-12-01 00:59:00.677 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - GitHub API error processing contributor dependabot[bot]: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+2025-12-01 00:59:00.678 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - Error processing repository: superset
+com.example.githubapache.exception.DataProcessingException: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:143)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:98)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:25)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: com.example.githubapache.exception.GitHubApiException: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:185)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:136)
+	... 40 common frames omitted
+Caused by: org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:174)
+	... 41 common frames omitted
+2025-12-01 00:59:00.681 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - Error processing Apache repositories
+com.example.githubapache.exception.DataProcessingException: [PROC_001] Veri iþleme hatasý - Repository 'superset' iþleme hatasý: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:108)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:25)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: com.example.githubapache.exception.DataProcessingException: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:143)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:98)
+	... 39 common frames omitted
+Caused by: com.example.githubapache.exception.GitHubApiException: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:185)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:136)
+	... 40 common frames omitted
+Caused by: org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:174)
+	... 41 common frames omitted
+2025-12-01 00:59:00.684 [restartedMain] ERROR c.e.g.GitHubApacheApplication - GitHub Apache error: PROC_001 - [PROC_001] Veri iþleme hatasý - Repository 'superset' iþleme hatasý: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+2025-12-01 00:59:18.783 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-12-01 00:59:18.817 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-12-01 00:59:18.828 [Thread-5] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-12-01 00:59:18.829 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-01 00:59:18.831 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-01 00:59:18.911 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 3288 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-01 00:59:18.912 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-01 00:59:18.912 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-01 00:59:19.471 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-01 00:59:19.472 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-01 00:59:19.472 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-01 00:59:19.501 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-01 00:59:19.562 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-01 00:59:19.693 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-01 00:59:19.695 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-01 00:59:19.695 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-01 00:59:19.696 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-01 00:59:20.121 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01 00:59:20.892 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-01 00:59:20.903 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 2.023 seconds (process running for 31.334)
+2025-12-01 00:59:20.905 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-01 00:59:20.906 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-01 00:59:20.906 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-01 00:59:20.908 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-01 00:59:20.908 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&sort=updated&direction=desc
+2025-12-01 00:59:23.033 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 repositories
+2025-12-01 00:59:23.034 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-01 00:59:23.038 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: superset
+2025-12-01 00:59:23.479 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 contributors for repository: superset
+2025-12-01 00:59:23.481 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-01 00:59:23.670 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 00:59:23.671 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 00:59:23.673 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-01 00:59:23.843 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - User not found: dependabot[bot]
+2025-12-01 00:59:23.845 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - GitHub API error processing contributor dependabot[bot]: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+2025-12-01 00:59:23.845 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - Error processing repository: superset
+com.example.githubapache.exception.DataProcessingException: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:143)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:98)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:25)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: com.example.githubapache.exception.GitHubApiException: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:185)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:136)
+	... 40 common frames omitted
+Caused by: org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:174)
+	... 41 common frames omitted
+2025-12-01 00:59:23.846 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - Error processing Apache repositories
+com.example.githubapache.exception.DataProcessingException: [PROC_001] Veri iþleme hatasý - Repository 'superset' iþleme hatasý: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:108)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:25)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: com.example.githubapache.exception.DataProcessingException: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:143)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:98)
+	... 39 common frames omitted
+Caused by: com.example.githubapache.exception.GitHubApiException: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:185)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:136)
+	... 40 common frames omitted
+Caused by: org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:174)
+	... 41 common frames omitted
+2025-12-01 00:59:23.848 [restartedMain] ERROR c.e.g.GitHubApacheApplication - GitHub Apache error: PROC_001 - [PROC_001] Veri iþleme hatasý - Repository 'superset' iþleme hatasý: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+2025-12-01 01:00:41.999 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-01 01:00:42.027 [http-nio-8080-exec-1] INFO  c.e.g.s.impl.ContributorServiceImpl - Fetching all contributors
+2025-12-01 01:00:46.685 [http-nio-8080-exec-2] INFO  c.e.g.s.impl.RepositoryServiceImpl - Fetching all repositories
+2025-12-01 01:03:25.766 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 25440 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-01 01:03:25.767 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-01 01:03:25.768 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-01 01:03:28.272 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:03:28.275 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-01 01:03:28.276 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-01 01:03:28.357 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-01 01:03:28.575 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-01 01:03:29.587 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-01 01:03:29.743 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-01 01:03:29.745 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-01 01:03:29.765 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-01 01:03:31.886 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01 01:03:33.458 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:03:33.484 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 8.226 seconds (process running for 8.663)
+2025-12-01 01:03:33.533 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-01 01:03:33.534 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-01 01:03:33.534 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-01 01:03:33.546 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-01 01:03:33.547 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&sort=updated&direction=desc
+2025-12-01 01:03:39.585 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 repositories
+2025-12-01 01:03:39.587 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-01 01:03:39.676 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: superset
+2025-12-01 01:03:40.099 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 contributors for repository: superset
+2025-12-01 01:03:40.100 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-01 01:03:40.308 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 01:03:40.308 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 01:03:40.331 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-01 01:03:40.696 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - User not found: dependabot[bot]
+2025-12-01 01:03:40.697 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - GitHub API error processing contributor dependabot[bot]: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+2025-12-01 01:03:40.698 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - Error processing repository: superset
+com.example.githubapache.exception.DataProcessingException: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:143)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:98)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:25)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: com.example.githubapache.exception.GitHubApiException: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:185)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:136)
+	... 40 common frames omitted
+Caused by: org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:174)
+	... 41 common frames omitted
+2025-12-01 01:03:40.700 [restartedMain] ERROR c.e.g.s.i.DataProcessingServiceImpl - Error processing Apache repositories
+com.example.githubapache.exception.DataProcessingException: [PROC_001] Veri iþleme hatasý - Repository 'superset' iþleme hatasý: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:108)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:25)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: com.example.githubapache.exception.DataProcessingException: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:143)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:98)
+	... 39 common frames omitted
+Caused by: com.example.githubapache.exception.GitHubApiException: [USER_003] User bulunamadý - User 'dependabot[bot]' bulunamadý
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:185)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:136)
+	... 40 common frames omitted
+Caused by: org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:174)
+	... 41 common frames omitted
+2025-12-01 01:03:40.704 [restartedMain] ERROR c.e.g.GitHubApacheApplication - GitHub Apache error: PROC_001 - [PROC_001] Veri iþleme hatasý - Repository 'superset' iþleme hatasý: [USER_003] User bulunamadý - Contributor 'dependabot[bot]' iþleme hatasý: User 'dependabot[bot]' bulunamadý
+2025-12-01 01:09:31.654 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:09:31.691 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:09:31.705 [Thread-5] WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2025-12-01 01:09:31.705 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-01 01:09:31.707 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-01 01:09:31.791 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 25440 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-01 01:09:31.791 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-01 01:09:31.791 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-01 01:09:32.541 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:09:32.541 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-01 01:09:32.541 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-01 01:09:32.563 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-01 01:09:32.620 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-01 01:09:32.764 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-01 01:09:32.766 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn11: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-01 01:09:32.767 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-01 01:09:32.767 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-01 01:09:33.215 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01 01:09:34.094 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:09:34.103 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 2.341 seconds (process running for 369.282)
+2025-12-01 01:09:34.105 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-01 01:09:34.106 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-01 01:09:34.106 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-01 01:09:34.107 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-01 01:09:34.108 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&sort=updated&direction=desc
+2025-12-01 01:09:54.913 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 26112 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-01 01:09:54.915 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-01 01:09:54.915 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-01 01:09:57.500 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:09:57.503 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-01 01:09:57.504 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-01 01:09:57.589 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-01 01:09:57.803 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-01 01:09:58.841 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-01 01:09:58.981 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-01 01:09:58.982 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-01 01:09:59.000 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-01 01:10:01.430 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01 01:10:03.086 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-01 01:10:03.115 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 8.716 seconds (process running for 9.134)
+2025-12-01 01:10:03.158 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-01 01:10:03.159 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-01 01:10:03.159 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-01 01:10:03.170 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-01 01:10:03.171 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&sort=updated&direction=desc
+2025-12-01 01:10:05.564 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 repositories
+2025-12-01 01:10:05.567 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-01 01:10:05.640 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/superset/contributors?per_page=100&page=1
+2025-12-01 01:10:06.569 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mistercrunch
+2025-12-01 01:10:06.766 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 01:10:06.766 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 01:10:06.788 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dependabot%5Bbot%5D
+2025-12-01 01:10:06.971 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - Error fetching user details for dependabot[bot]: 
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:93)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:116)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:90)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:21)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-12-01 01:10:06.973 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-01 01:10:06.976 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/villebro
+2025-12-01 01:10:07.188 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: villebro
+2025-12-01 01:10:07.188 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: villebro
+2025-12-01 01:10:07.190 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kristw
+2025-12-01 01:10:07.374 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kristw
+2025-12-01 01:10:07.375 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kristw
+2025-12-01 01:10:07.377 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/betodealmeida
+2025-12-01 01:10:07.567 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: betodealmeida
+2025-12-01 01:10:07.567 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: betodealmeida
+2025-12-01 01:10:07.568 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/michael-s-molina
+2025-12-01 01:10:07.808 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: michael-s-molina
+2025-12-01 01:10:07.809 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: michael-s-molina
+2025-12-01 01:10:07.810 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/john-bodley
+2025-12-01 01:10:08.006 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: john-bodley
+2025-12-01 01:10:08.007 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: john-bodley
+2025-12-01 01:10:08.010 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kgabryje
+2025-12-01 01:10:08.208 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kgabryje
+2025-12-01 01:10:08.209 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kgabryje
+2025-12-01 01:10:08.210 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dpgaspar
+2025-12-01 01:10:08.402 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dpgaspar
+2025-12-01 01:10:08.402 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dpgaspar
+2025-12-01 01:10:08.403 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/rusackas
+2025-12-01 01:10:08.635 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: rusackas
+2025-12-01 01:10:08.635 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rusackas
+2025-12-01 01:10:08.636 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: echarts
+2025-12-01 01:10:08.637 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/echarts/contributors?per_page=100&page=1
+2025-12-01 01:10:09.032 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/pissang
+2025-12-01 01:10:09.237 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: pissang
+2025-12-01 01:10:09.238 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pissang
+2025-12-01 01:10:09.239 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/100pah
+2025-12-01 01:10:09.433 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: 100pah
+2025-12-01 01:10:09.433 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: 100pah
+2025-12-01 01:10:09.434 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/Ovilia
+2025-12-01 01:10:09.614 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: Ovilia
+2025-12-01 01:10:09.615 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: Ovilia
+2025-12-01 01:10:09.615 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kener
+2025-12-01 01:10:09.813 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kener
+2025-12-01 01:10:09.814 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kener
+2025-12-01 01:10:09.815 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/plainheart
+2025-12-01 01:10:10.016 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: plainheart
+2025-12-01 01:10:10.017 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: plainheart
+2025-12-01 01:10:10.018 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/deqingli
+2025-12-01 01:10:10.218 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: deqingli
+2025-12-01 01:10:10.218 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: deqingli
+2025-12-01 01:10:10.219 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/susiwen8
+2025-12-01 01:10:10.420 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: susiwen8
+2025-12-01 01:10:10.421 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: susiwen8
+2025-12-01 01:10:10.422 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/yufeng04
+2025-12-01 01:10:10.621 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: yufeng04
+2025-12-01 01:10:10.621 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yufeng04
+2025-12-01 01:10:10.623 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/loutongbing
+2025-12-01 01:10:10.818 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: loutongbing
+2025-12-01 01:10:10.818 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: loutongbing
+2025-12-01 01:10:10.820 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/jiawulin001
+2025-12-01 01:10:11.020 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: jiawulin001
+2025-12-01 01:10:11.020 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jiawulin001
+2025-12-01 01:10:11.022 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: airflow
+2025-12-01 01:10:11.023 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/airflow/contributors?per_page=100&page=1
+2025-12-01 01:10:11.712 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/potiuk
+2025-12-01 01:10:11.907 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: potiuk
+2025-12-01 01:10:11.907 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: potiuk
+2025-12-01 01:10:11.909 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kaxil
+2025-12-01 01:10:12.137 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kaxil
+2025-12-01 01:10:12.138 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kaxil
+2025-12-01 01:10:12.139 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mistercrunch
+2025-12-01 01:10:12.335 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 01:10:12.336 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 01:10:12.337 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/ashb
+2025-12-01 01:10:12.534 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ashb
+2025-12-01 01:10:12.535 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ashb
+2025-12-01 01:10:12.536 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mik-laj
+2025-12-01 01:10:12.739 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mik-laj
+2025-12-01 01:10:12.740 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mik-laj
+2025-12-01 01:10:12.742 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/jedcunningham
+2025-12-01 01:10:12.925 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: jedcunningham
+2025-12-01 01:10:12.925 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jedcunningham
+2025-12-01 01:10:12.926 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/amoghrajesh
+2025-12-01 01:10:13.112 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: amoghrajesh
+2025-12-01 01:10:13.113 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: amoghrajesh
+2025-12-01 01:10:13.114 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dstandish
+2025-12-01 01:10:13.305 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dstandish
+2025-12-01 01:10:13.305 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dstandish
+2025-12-01 01:10:13.306 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/eladkal
+2025-12-01 01:10:13.490 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: eladkal
+2025-12-01 01:10:13.490 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: eladkal
+2025-12-01 01:10:13.492 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/ephraimbuddy
+2025-12-01 01:10:13.852 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ephraimbuddy
+2025-12-01 01:10:13.853 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ephraimbuddy
+2025-12-01 01:10:13.855 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: spark
+2025-12-01 01:10:13.856 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/spark/contributors?per_page=100&page=1
+2025-12-01 01:10:14.147 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dongjoon-hyun
+2025-12-01 01:10:14.338 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dongjoon-hyun
+2025-12-01 01:10:14.338 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dongjoon-hyun
+2025-12-01 01:10:14.339 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/HyukjinKwon
+2025-12-01 01:10:14.529 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: HyukjinKwon
+2025-12-01 01:10:14.529 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: HyukjinKwon
+2025-12-01 01:10:14.530 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/zhengruifeng
+2025-12-01 01:10:14.748 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: zhengruifeng
+2025-12-01 01:10:14.748 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: zhengruifeng
+2025-12-01 01:10:14.749 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mateiz
+2025-12-01 01:10:14.961 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mateiz
+2025-12-01 01:10:14.962 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mateiz
+2025-12-01 01:10:14.963 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/rxin
+2025-12-01 01:10:15.351 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: rxin
+2025-12-01 01:10:15.351 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rxin
+2025-12-01 01:10:15.353 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/cloud-fan
+2025-12-01 01:10:15.547 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: cloud-fan
+2025-12-01 01:10:15.548 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cloud-fan
+2025-12-01 01:10:15.549 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/LuciferYang
+2025-12-01 01:10:15.752 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: LuciferYang
+2025-12-01 01:10:15.752 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: LuciferYang
+2025-12-01 01:10:15.753 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/MaxGekk
+2025-12-01 01:10:15.944 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: MaxGekk
+2025-12-01 01:10:15.945 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: MaxGekk
+2025-12-01 01:10:15.946 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/pwendell
+2025-12-01 01:10:16.144 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: pwendell
+2025-12-01 01:10:16.145 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pwendell
+2025-12-01 01:10:16.146 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/yaooqinn
+2025-12-01 01:10:16.357 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: yaooqinn
+2025-12-01 01:10:16.358 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yaooqinn
+2025-12-01 01:10:16.359 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: dubbo
+2025-12-01 01:10:16.361 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/dubbo/contributors?per_page=100&page=1
+2025-12-01 01:10:17.028 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/AlbumenJ
+2025-12-01 01:10:17.226 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: AlbumenJ
+2025-12-01 01:10:17.226 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: AlbumenJ
+2025-12-01 01:10:17.227 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/chickenlj
+2025-12-01 01:10:17.530 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: chickenlj
+2025-12-01 01:10:17.530 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: chickenlj
+2025-12-01 01:10:17.531 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dependabot%5Bbot%5D
+2025-12-01 01:10:17.697 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - Error fetching user details for dependabot[bot]: 
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:93)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:116)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:90)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:21)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-12-01 01:10:17.698 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-01 01:10:17.699 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/beiwei30
+2025-12-01 01:10:17.892 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: beiwei30
+2025-12-01 01:10:17.892 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: beiwei30
+2025-12-01 01:10:17.894 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/CrazyHZM
+2025-12-01 01:10:18.105 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: CrazyHZM
+2025-12-01 01:10:18.106 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: CrazyHZM
+2025-12-01 01:10:18.107 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/cvictory
+2025-12-01 01:10:18.302 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: cvictory
+2025-12-01 01:10:18.302 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cvictory
+2025-12-01 01:10:18.304 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/liangfei0201
+2025-12-01 01:10:18.506 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: liangfei0201
+2025-12-01 01:10:18.506 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: liangfei0201
+2025-12-01 01:10:18.507 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mercyblitz
+2025-12-01 01:10:18.695 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mercyblitz
+2025-12-01 01:10:18.695 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mercyblitz
+2025-12-01 01:10:18.696 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/oldratlee
+2025-12-01 01:10:19.079 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: oldratlee
+2025-12-01 01:10:19.079 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: oldratlee
+2025-12-01 01:10:19.080 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/ralf0131
+2025-12-01 01:10:19.261 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ralf0131
+2025-12-01 01:10:19.262 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ralf0131
+2025-12-01 01:10:19.262 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Apache repositories processing completed successfully
+2025-12-01 01:11:00.802 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-01 01:11:00.836 [http-nio-8080-exec-1] INFO  c.e.g.s.impl.RepositoryServiceImpl - Fetching all repositories
+2025-12-01 01:11:22.063 [http-nio-8080-exec-2] INFO  c.e.g.s.impl.ContributorServiceImpl - Total contributors count: 50
+2025-12-01 01:11:30.600 [http-nio-8080-exec-3] INFO  c.e.g.s.impl.ContributorServiceImpl - Fetching all contributors
+2025-12-01 09:53:08.647 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 28752 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-01 09:53:08.659 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-01 09:53:08.660 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-01 09:53:11.139 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-01 09:53:11.142 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-01 09:53:11.143 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-01 09:53:11.208 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-01 09:53:11.399 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-01 09:53:12.412 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-01 09:53:12.578 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-01 09:53:12.579 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-01 09:53:12.603 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-01 09:53:14.594 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01 09:53:16.164 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-01 09:53:16.195 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 8.028 seconds (process running for 8.509)
+2025-12-01 09:53:16.262 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-01 09:53:16.262 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-01 09:53:16.263 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-01 09:53:16.272 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-01 09:53:16.273 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&sort=updated&direction=desc
+2025-12-01 09:53:18.770 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 repositories
+2025-12-01 09:53:18.782 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-01 09:53:18.862 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/superset/contributors?per_page=100&page=1
+2025-12-01 09:53:19.717 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mistercrunch
+2025-12-01 09:53:19.969 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 09:53:19.970 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 09:53:20.004 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dependabot%5Bbot%5D
+2025-12-01 09:53:20.174 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - Error fetching user details for dependabot[bot]: 
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:93)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:116)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:90)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:21)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-12-01 09:53:20.177 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-01 09:53:20.178 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/villebro
+2025-12-01 09:53:20.387 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: villebro
+2025-12-01 09:53:20.389 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: villebro
+2025-12-01 09:53:20.390 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kristw
+2025-12-01 09:53:20.578 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kristw
+2025-12-01 09:53:20.579 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kristw
+2025-12-01 09:53:20.580 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/betodealmeida
+2025-12-01 09:53:20.776 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: betodealmeida
+2025-12-01 09:53:20.776 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: betodealmeida
+2025-12-01 09:53:20.778 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/michael-s-molina
+2025-12-01 09:53:20.970 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: michael-s-molina
+2025-12-01 09:53:20.972 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: michael-s-molina
+2025-12-01 09:53:20.973 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/john-bodley
+2025-12-01 09:53:21.184 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: john-bodley
+2025-12-01 09:53:21.184 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: john-bodley
+2025-12-01 09:53:21.186 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kgabryje
+2025-12-01 09:53:21.469 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kgabryje
+2025-12-01 09:53:21.469 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kgabryje
+2025-12-01 09:53:21.470 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dpgaspar
+2025-12-01 09:53:21.661 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dpgaspar
+2025-12-01 09:53:21.661 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dpgaspar
+2025-12-01 09:53:21.664 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/rusackas
+2025-12-01 09:53:22.086 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: rusackas
+2025-12-01 09:53:22.086 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rusackas
+2025-12-01 09:53:22.088 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: echarts
+2025-12-01 09:53:22.089 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/echarts/contributors?per_page=100&page=1
+2025-12-01 09:53:22.575 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/pissang
+2025-12-01 09:53:22.767 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: pissang
+2025-12-01 09:53:22.768 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pissang
+2025-12-01 09:53:22.771 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/100pah
+2025-12-01 09:53:22.970 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: 100pah
+2025-12-01 09:53:22.973 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: 100pah
+2025-12-01 09:53:22.975 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/Ovilia
+2025-12-01 09:53:23.157 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: Ovilia
+2025-12-01 09:53:23.158 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: Ovilia
+2025-12-01 09:53:23.161 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kener
+2025-12-01 09:53:23.358 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kener
+2025-12-01 09:53:23.358 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kener
+2025-12-01 09:53:23.360 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/plainheart
+2025-12-01 09:53:23.570 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: plainheart
+2025-12-01 09:53:23.572 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: plainheart
+2025-12-01 09:53:23.575 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/deqingli
+2025-12-01 09:53:23.760 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: deqingli
+2025-12-01 09:53:23.762 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: deqingli
+2025-12-01 09:53:23.764 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/susiwen8
+2025-12-01 09:53:23.951 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: susiwen8
+2025-12-01 09:53:23.952 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: susiwen8
+2025-12-01 09:53:23.953 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/yufeng04
+2025-12-01 09:53:24.150 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: yufeng04
+2025-12-01 09:53:24.151 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yufeng04
+2025-12-01 09:53:24.153 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/loutongbing
+2025-12-01 09:53:24.370 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: loutongbing
+2025-12-01 09:53:24.371 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: loutongbing
+2025-12-01 09:53:24.372 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/jiawulin001
+2025-12-01 09:53:24.567 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: jiawulin001
+2025-12-01 09:53:24.568 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jiawulin001
+2025-12-01 09:53:24.570 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: airflow
+2025-12-01 09:53:24.572 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/airflow/contributors?per_page=100&page=1
+2025-12-01 09:53:25.159 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/potiuk
+2025-12-01 09:53:25.364 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: potiuk
+2025-12-01 09:53:25.364 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: potiuk
+2025-12-01 09:53:25.365 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/kaxil
+2025-12-01 09:53:25.561 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kaxil
+2025-12-01 09:53:25.561 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kaxil
+2025-12-01 09:53:25.563 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mistercrunch
+2025-12-01 09:53:25.759 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 09:53:25.761 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 09:53:25.763 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/ashb
+2025-12-01 09:53:25.955 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ashb
+2025-12-01 09:53:25.957 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ashb
+2025-12-01 09:53:25.958 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mik-laj
+2025-12-01 09:53:26.150 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mik-laj
+2025-12-01 09:53:26.151 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mik-laj
+2025-12-01 09:53:26.152 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/jedcunningham
+2025-12-01 09:53:26.535 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: jedcunningham
+2025-12-01 09:53:26.535 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jedcunningham
+2025-12-01 09:53:26.537 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/amoghrajesh
+2025-12-01 09:53:26.725 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: amoghrajesh
+2025-12-01 09:53:26.725 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: amoghrajesh
+2025-12-01 09:53:26.727 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dstandish
+2025-12-01 09:53:26.944 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dstandish
+2025-12-01 09:53:26.945 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dstandish
+2025-12-01 09:53:26.947 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/eladkal
+2025-12-01 09:53:27.144 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: eladkal
+2025-12-01 09:53:27.145 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: eladkal
+2025-12-01 09:53:27.147 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/ephraimbuddy
+2025-12-01 09:53:27.342 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ephraimbuddy
+2025-12-01 09:53:27.343 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ephraimbuddy
+2025-12-01 09:53:27.344 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: spark
+2025-12-01 09:53:27.346 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/spark/contributors?per_page=100&page=1
+2025-12-01 09:53:28.244 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dongjoon-hyun
+2025-12-01 09:53:28.596 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dongjoon-hyun
+2025-12-01 09:53:28.597 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dongjoon-hyun
+2025-12-01 09:53:28.599 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/HyukjinKwon
+2025-12-01 09:53:28.802 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: HyukjinKwon
+2025-12-01 09:53:28.802 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: HyukjinKwon
+2025-12-01 09:53:28.804 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/zhengruifeng
+2025-12-01 09:53:29.200 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: zhengruifeng
+2025-12-01 09:53:29.200 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: zhengruifeng
+2025-12-01 09:53:29.203 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mateiz
+2025-12-01 09:53:29.405 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mateiz
+2025-12-01 09:53:29.405 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mateiz
+2025-12-01 09:53:29.406 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/rxin
+2025-12-01 09:53:29.604 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: rxin
+2025-12-01 09:53:29.605 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rxin
+2025-12-01 09:53:29.605 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/cloud-fan
+2025-12-01 09:53:29.815 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: cloud-fan
+2025-12-01 09:53:29.817 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cloud-fan
+2025-12-01 09:53:29.819 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/LuciferYang
+2025-12-01 09:53:30.020 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: LuciferYang
+2025-12-01 09:53:30.022 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: LuciferYang
+2025-12-01 09:53:30.023 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/MaxGekk
+2025-12-01 09:53:30.222 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: MaxGekk
+2025-12-01 09:53:30.222 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: MaxGekk
+2025-12-01 09:53:30.223 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/pwendell
+2025-12-01 09:53:30.409 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: pwendell
+2025-12-01 09:53:30.409 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pwendell
+2025-12-01 09:53:30.410 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/yaooqinn
+2025-12-01 09:53:30.606 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: yaooqinn
+2025-12-01 09:53:30.607 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yaooqinn
+2025-12-01 09:53:30.609 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: dubbo
+2025-12-01 09:53:30.610 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors first page from: https://api.github.com/repos/apache/dubbo/contributors?per_page=100&page=1
+2025-12-01 09:53:31.243 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/AlbumenJ
+2025-12-01 09:53:31.428 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: AlbumenJ
+2025-12-01 09:53:31.428 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: AlbumenJ
+2025-12-01 09:53:31.429 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/chickenlj
+2025-12-01 09:53:31.630 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: chickenlj
+2025-12-01 09:53:31.631 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: chickenlj
+2025-12-01 09:53:31.633 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/dependabot%5Bbot%5D
+2025-12-01 09:53:31.795 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - Error fetching user details for dependabot[bot]: 
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:93)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:116)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:90)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:21)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-12-01 09:53:31.797 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-01 09:53:31.799 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/beiwei30
+2025-12-01 09:53:31.986 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: beiwei30
+2025-12-01 09:53:31.986 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: beiwei30
+2025-12-01 09:53:31.988 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/CrazyHZM
+2025-12-01 09:53:32.185 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: CrazyHZM
+2025-12-01 09:53:32.186 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: CrazyHZM
+2025-12-01 09:53:32.187 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/cvictory
+2025-12-01 09:53:32.389 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: cvictory
+2025-12-01 09:53:32.390 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cvictory
+2025-12-01 09:53:32.391 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/liangfei0201
+2025-12-01 09:53:32.575 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: liangfei0201
+2025-12-01 09:53:32.575 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: liangfei0201
+2025-12-01 09:53:32.576 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/mercyblitz
+2025-12-01 09:53:32.780 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mercyblitz
+2025-12-01 09:53:32.780 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mercyblitz
+2025-12-01 09:53:32.782 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/oldratlee
+2025-12-01 09:53:32.968 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: oldratlee
+2025-12-01 09:53:32.969 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: oldratlee
+2025-12-01 09:53:32.971 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details from: https://api.github.com/users/ralf0131
+2025-12-01 09:53:33.355 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ralf0131
+2025-12-01 09:53:33.356 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ralf0131
+2025-12-01 09:53:33.357 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Apache repositories processing completed successfully
+2025-12-01 11:55:50.673 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 9240 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-01 11:55:50.674 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-01 11:55:50.675 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-01 11:55:53.143 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-01 11:55:53.147 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-01 11:55:53.148 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-01 11:55:53.229 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-01 11:55:53.450 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-01 11:55:54.545 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-01 11:55:54.684 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-01 11:55:54.685 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-01 11:55:54.704 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-01 11:55:56.901 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-01 11:55:58.517 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-01 11:55:58.544 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 8.373 seconds (process running for 8.833)
+2025-12-01 11:55:58.586 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-01 11:55:58.587 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-01 11:55:58.587 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-01 11:55:58.596 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-01 11:55:58.599 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories from: https://api.github.com/orgs/apache/repos?per_page=100&page=1&sort=updated&direction=desc
+2025-12-01 11:56:00.905 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved 100 repositories
+2025-12-01 11:56:00.908 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-01 11:56:00.996 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: superset from: https://api.github.com/repos/apache/superset/contributors?per_page=100&page=1
+2025-12-01 11:56:01.652 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-01 11:56:01.854 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 11:56:01.855 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 11:56:01.881 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-01 11:56:02.068 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - Error fetching user details for dependabot[bot]: 
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:102)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:116)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:90)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:21)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-12-01 11:56:02.071 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-01 11:56:02.072 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: villebro
+2025-12-01 11:56:02.261 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: villebro
+2025-12-01 11:56:02.262 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: villebro
+2025-12-01 11:56:02.264 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kristw
+2025-12-01 11:56:02.658 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kristw
+2025-12-01 11:56:02.658 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kristw
+2025-12-01 11:56:02.660 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: betodealmeida
+2025-12-01 11:56:02.858 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: betodealmeida
+2025-12-01 11:56:02.859 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: betodealmeida
+2025-12-01 11:56:02.860 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: michael-s-molina
+2025-12-01 11:56:03.067 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: michael-s-molina
+2025-12-01 11:56:03.067 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: michael-s-molina
+2025-12-01 11:56:03.068 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: john-bodley
+2025-12-01 11:56:03.256 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: john-bodley
+2025-12-01 11:56:03.257 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: john-bodley
+2025-12-01 11:56:03.258 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kgabryje
+2025-12-01 11:56:03.471 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kgabryje
+2025-12-01 11:56:03.471 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kgabryje
+2025-12-01 11:56:03.473 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dpgaspar
+2025-12-01 11:56:03.682 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dpgaspar
+2025-12-01 11:56:03.682 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dpgaspar
+2025-12-01 11:56:03.683 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rusackas
+2025-12-01 11:56:03.904 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: rusackas
+2025-12-01 11:56:03.904 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rusackas
+2025-12-01 11:56:03.906 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: airflow
+2025-12-01 11:56:03.906 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: airflow from: https://api.github.com/repos/apache/airflow/contributors?per_page=100&page=1
+2025-12-01 11:56:04.315 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: potiuk
+2025-12-01 11:56:04.508 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: potiuk
+2025-12-01 11:56:04.508 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: potiuk
+2025-12-01 11:56:04.510 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kaxil
+2025-12-01 11:56:04.712 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: kaxil
+2025-12-01 11:56:04.713 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kaxil
+2025-12-01 11:56:04.714 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-01 11:56:04.906 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mistercrunch
+2025-12-01 11:56:04.906 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-01 11:56:04.907 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ashb
+2025-12-01 11:56:05.091 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ashb
+2025-12-01 11:56:05.092 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ashb
+2025-12-01 11:56:05.094 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mik-laj
+2025-12-01 11:56:05.301 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mik-laj
+2025-12-01 11:56:05.302 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mik-laj
+2025-12-01 11:56:05.303 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: jedcunningham
+2025-12-01 11:56:05.545 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: jedcunningham
+2025-12-01 11:56:05.547 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jedcunningham
+2025-12-01 11:56:05.549 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: amoghrajesh
+2025-12-01 11:56:05.793 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: amoghrajesh
+2025-12-01 11:56:05.793 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: amoghrajesh
+2025-12-01 11:56:05.794 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dstandish
+2025-12-01 11:56:05.982 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dstandish
+2025-12-01 11:56:05.982 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dstandish
+2025-12-01 11:56:05.983 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: eladkal
+2025-12-01 11:56:06.169 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: eladkal
+2025-12-01 11:56:06.170 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: eladkal
+2025-12-01 11:56:06.171 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ephraimbuddy
+2025-12-01 11:56:06.376 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ephraimbuddy
+2025-12-01 11:56:06.376 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ephraimbuddy
+2025-12-01 11:56:06.377 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: spark
+2025-12-01 11:56:06.379 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: spark from: https://api.github.com/repos/apache/spark/contributors?per_page=100&page=1
+2025-12-01 11:56:06.789 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dongjoon-hyun
+2025-12-01 11:56:07.002 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dongjoon-hyun
+2025-12-01 11:56:07.003 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dongjoon-hyun
+2025-12-01 11:56:07.005 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: HyukjinKwon
+2025-12-01 11:56:07.194 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: HyukjinKwon
+2025-12-01 11:56:07.194 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: HyukjinKwon
+2025-12-01 11:56:07.195 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: zhengruifeng
+2025-12-01 11:56:07.400 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: zhengruifeng
+2025-12-01 11:56:07.400 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: zhengruifeng
+2025-12-01 11:56:07.402 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mateiz
+2025-12-01 11:56:07.675 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mateiz
+2025-12-01 11:56:07.676 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mateiz
+2025-12-01 11:56:07.678 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rxin
+2025-12-01 11:56:07.898 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: rxin
+2025-12-01 11:56:07.898 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rxin
+2025-12-01 11:56:07.899 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cloud-fan
+2025-12-01 11:56:08.106 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: cloud-fan
+2025-12-01 11:56:08.107 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cloud-fan
+2025-12-01 11:56:08.108 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: LuciferYang
+2025-12-01 11:56:08.297 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: LuciferYang
+2025-12-01 11:56:08.298 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: LuciferYang
+2025-12-01 11:56:08.300 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: MaxGekk
+2025-12-01 11:56:08.506 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: MaxGekk
+2025-12-01 11:56:08.506 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: MaxGekk
+2025-12-01 11:56:08.509 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: pwendell
+2025-12-01 11:56:08.693 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: pwendell
+2025-12-01 11:56:08.694 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pwendell
+2025-12-01 11:56:08.696 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: yaooqinn
+2025-12-01 11:56:08.906 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: yaooqinn
+2025-12-01 11:56:08.907 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yaooqinn
+2025-12-01 11:56:08.908 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: dubbo
+2025-12-01 11:56:08.909 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: dubbo from: https://api.github.com/repos/apache/dubbo/contributors?per_page=100&page=1
+2025-12-01 11:56:09.723 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: AlbumenJ
+2025-12-01 11:56:10.039 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: AlbumenJ
+2025-12-01 11:56:10.039 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: AlbumenJ
+2025-12-01 11:56:10.041 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: chickenlj
+2025-12-01 11:56:10.250 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: chickenlj
+2025-12-01 11:56:10.250 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: chickenlj
+2025-12-01 11:56:10.252 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-01 11:56:10.435 [restartedMain] ERROR c.e.g.s.impl.GitHubApiServiceImpl - Error fetching user details for dependabot[bot]: 
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found on GET request for "https://api.github.com/users/dependabot%255Bbot%255D": "{"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:112)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:953)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:902)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:801)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:415)
+	at com.example.githubapache.service.impl.GitHubApiServiceImpl.getUserDetails(GitHubApiServiceImpl.java:102)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processContributor(DataProcessingServiceImpl.java:116)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processRepository(DataProcessingServiceImpl.java:90)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl.processApacheRepositories(DataProcessingServiceImpl.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.example.githubapache.service.impl.DataProcessingServiceImpl$$SpringCGLIB$$0.processApacheRepositories(<generated>)
+	at com.example.githubapache.GitHubApacheApplication.lambda$0(GitHubApacheApplication.java:21)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$5(SpringApplication.java:788)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:796)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:772)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.example.githubapache.GitHubApacheApplication.main(GitHubApacheApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-12-01 11:56:10.436 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-01 11:56:10.438 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: beiwei30
+2025-12-01 11:56:10.642 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: beiwei30
+2025-12-01 11:56:10.642 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: beiwei30
+2025-12-01 11:56:10.643 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: CrazyHZM
+2025-12-01 11:56:10.836 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: CrazyHZM
+2025-12-01 11:56:10.836 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: CrazyHZM
+2025-12-01 11:56:10.837 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cvictory
+2025-12-01 11:56:11.070 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: cvictory
+2025-12-01 11:56:11.070 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cvictory
+2025-12-01 11:56:11.071 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: liangfei0201
+2025-12-01 11:56:11.277 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: liangfei0201
+2025-12-01 11:56:11.277 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: liangfei0201
+2025-12-01 11:56:11.278 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mercyblitz
+2025-12-01 11:56:11.490 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mercyblitz
+2025-12-01 11:56:11.490 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mercyblitz
+2025-12-01 11:56:11.491 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: oldratlee
+2025-12-01 11:56:11.688 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: oldratlee
+2025-12-01 11:56:11.689 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: oldratlee
+2025-12-01 11:56:11.690 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ralf0131
+2025-12-01 11:56:11.908 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ralf0131
+2025-12-01 11:56:11.908 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ralf0131
+2025-12-01 11:56:11.909 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: kafka
+2025-12-01 11:56:11.910 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: kafka from: https://api.github.com/repos/apache/kafka/contributors?per_page=100&page=1
+2025-12-01 11:56:12.775 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ijuma
+2025-12-01 11:56:12.962 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ijuma
+2025-12-01 11:56:12.963 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ijuma
+2025-12-01 11:56:12.964 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mjsax
+2025-12-01 11:56:13.195 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mjsax
+2025-12-01 11:56:13.195 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mjsax
+2025-12-01 11:56:13.196 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: hachikuji
+2025-12-01 11:56:13.384 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: hachikuji
+2025-12-01 11:56:13.385 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: hachikuji
+2025-12-01 11:56:13.387 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: guozhangwang
+2025-12-01 11:56:13.569 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: guozhangwang
+2025-12-01 11:56:13.570 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: guozhangwang
+2025-12-01 11:56:13.570 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cmccabe
+2025-12-01 11:56:13.815 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: cmccabe
+2025-12-01 11:56:13.816 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cmccabe
+2025-12-01 11:56:13.817 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dajac
+2025-12-01 11:56:14.019 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: dajac
+2025-12-01 11:56:14.020 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dajac
+2025-12-01 11:56:14.021 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rajinisivaram
+2025-12-01 11:56:14.220 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: rajinisivaram
+2025-12-01 11:56:14.221 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rajinisivaram
+2025-12-01 11:56:14.221 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mimaison
+2025-12-01 11:56:14.416 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mimaison
+2025-12-01 11:56:14.416 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mimaison
+2025-12-01 11:56:14.417 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mumrah
+2025-12-01 11:56:14.622 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: mumrah
+2025-12-01 11:56:14.623 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mumrah
+2025-12-01 11:56:14.624 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ableegoldman
+2025-12-01 11:56:14.865 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Retrieved user details for: ableegoldman
+2025-12-01 11:56:14.865 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ableegoldman
+2025-12-01 11:56:14.866 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Apache repositories processing completed successfully
+2025-12-01 11:56:47.784 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-01 11:56:48.272 [http-nio-8080-exec-8] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 238 ms
+2025-12-01 11:56:52.239 [http-nio-8080-exec-9] INFO  c.e.g.s.impl.RepositoryServiceImpl - Fetching all repositories
+2025-12-01 11:57:06.756 [http-nio-8080-exec-10] INFO  c.e.g.s.impl.ContributorServiceImpl - Fetching all contributors
