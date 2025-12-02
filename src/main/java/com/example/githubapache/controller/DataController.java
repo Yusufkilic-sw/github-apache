@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.githubapache.entity.ContributorEntity;
-import com.example.githubapache.entity.RepositoryEntity;
+import com.example.githubapache.dto.ContributorResponseDto;
+import com.example.githubapache.dto.RepositoryResponseDto;
+import com.example.githubapache.mapper.EntityToDtoMapper;
 import com.example.githubapache.service.ContributorService;
 import com.example.githubapache.service.RepositoryService;
 
@@ -23,23 +24,24 @@ public class DataController {
 
     private final RepositoryService repositoryService;
     private final ContributorService contributorService;
+    private final EntityToDtoMapper entityMapper;
 
     @GetMapping("/repositories")
     @Operation(summary = "Get all repositories", description = "Retrieve all Apache repositories from the database")
-    public List<RepositoryEntity> getAllRepositories() {
-        return repositoryService.getAllRepositories();
+    public List<RepositoryResponseDto> getAllRepositories() {
+        return entityMapper.toRepositoryDtoList(repositoryService.getAllRepositories());
     }
 
     @GetMapping("/repositories/{name}/contributors")
     @Operation(summary = "Get contributors by repository", description = "Retrieve all top contributors for a specific repository")
-    public List<ContributorEntity> getContributorsByRepository(@PathVariable String name) {
-        return contributorService.getContributorsByRepositoryName(name);
+    public List<ContributorResponseDto> getContributorsByRepository(@PathVariable String name) {
+        return entityMapper.toContributorDtoList(contributorService.getContributorsByRepositoryName(name));
     }
 
     @GetMapping("/contributors")
     @Operation(summary = "Get all contributors", description = "Retrieve all contributors across all repositories")
-    public List<ContributorEntity> getAllContributors() {
-        return contributorService.getAllContributors();
+    public List<ContributorResponseDto> getAllContributors() {
+        return entityMapper.toContributorDtoList(contributorService.getAllContributors());
     }
 
     @GetMapping("/repositories/count")

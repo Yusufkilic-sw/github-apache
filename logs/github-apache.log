@@ -5762,3 +5762,551 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is alrea
 2025-12-02 23:19:33.235 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ableegoldman
 2025-12-02 23:19:33.236 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ableegoldman
 2025-12-02 23:19:33.239 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Apache repositories processing completed successfully
+2025-12-02 23:35:14.144 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Starting GitHubApacheApplication using Java 17.0.17 with PID 20012 (C:\Users\yusuf\OneDrive\Masaüstü\github-apache\target\classes started by yusuf in C:\Users\yusuf\OneDrive\Masaüstü\github-apache)
+2025-12-02 23:35:14.146 [restartedMain] DEBUG c.e.g.GitHubApacheApplication - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-02 23:35:14.147 [restartedMain] INFO  c.e.g.GitHubApacheApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-02 23:35:16.420 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-02 23:35:16.421 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-02 23:35:16.422 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-02 23:35:16.476 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-02 23:35:16.668 [restartedMain] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-02 23:35:17.436 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-02 23:35:17.572 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-02 23:35:17.574 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-02 23:35:17.591 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-02 23:35:18.764 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-02 23:35:19.358 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-02 23:35:20.806 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-02 23:35:20.834 [restartedMain] INFO  c.e.g.GitHubApacheApplication - Started GitHubApacheApplication in 7.19 seconds (process running for 7.592)
+2025-12-02 23:35:20.885 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-02 23:35:20.885 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories for org apache perPage 100
+2025-12-02 23:35:22.882 [restartedMain] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Repositories fetched: 100
+2025-12-02 23:35:22.886 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-02 23:35:22.961 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: superset
+2025-12-02 23:35:23.378 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-02 23:35:23.594 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mistercrunch
+2025-12-02 23:35:23.594 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-02 23:35:23.620 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-02 23:35:23.796 [restartedMain] DEBUG c.e.g.client.GitHubApiClientImpl - User not found dependabot[bot] (404)
+2025-12-02 23:35:23.797 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dependabot[bot]
+2025-12-02 23:35:23.797 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-02 23:35:23.798 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: villebro
+2025-12-02 23:35:24.003 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: villebro
+2025-12-02 23:35:24.003 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: villebro
+2025-12-02 23:35:24.004 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kristw
+2025-12-02 23:35:24.244 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kristw
+2025-12-02 23:35:24.244 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kristw
+2025-12-02 23:35:24.246 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: betodealmeida
+2025-12-02 23:35:24.432 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: betodealmeida
+2025-12-02 23:35:24.432 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: betodealmeida
+2025-12-02 23:35:24.434 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: michael-s-molina
+2025-12-02 23:35:24.635 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: michael-s-molina
+2025-12-02 23:35:24.635 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: michael-s-molina
+2025-12-02 23:35:24.637 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: john-bodley
+2025-12-02 23:35:24.827 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: john-bodley
+2025-12-02 23:35:24.828 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: john-bodley
+2025-12-02 23:35:24.828 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kgabryje
+2025-12-02 23:35:25.031 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kgabryje
+2025-12-02 23:35:25.031 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kgabryje
+2025-12-02 23:35:25.031 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dpgaspar
+2025-12-02 23:35:25.210 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dpgaspar
+2025-12-02 23:35:25.211 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dpgaspar
+2025-12-02 23:35:25.212 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rusackas
+2025-12-02 23:35:25.424 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rusackas
+2025-12-02 23:35:25.425 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rusackas
+2025-12-02 23:35:25.426 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: echarts
+2025-12-02 23:35:25.427 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: echarts
+2025-12-02 23:35:26.075 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: pissang
+2025-12-02 23:35:26.272 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: pissang
+2025-12-02 23:35:26.272 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pissang
+2025-12-02 23:35:26.274 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: 100pah
+2025-12-02 23:35:26.466 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: 100pah
+2025-12-02 23:35:26.467 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: 100pah
+2025-12-02 23:35:26.468 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: Ovilia
+2025-12-02 23:35:26.646 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: Ovilia
+2025-12-02 23:35:26.646 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: Ovilia
+2025-12-02 23:35:26.648 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kener
+2025-12-02 23:35:26.855 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kener
+2025-12-02 23:35:26.856 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kener
+2025-12-02 23:35:26.857 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: plainheart
+2025-12-02 23:35:27.060 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: plainheart
+2025-12-02 23:35:27.061 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: plainheart
+2025-12-02 23:35:27.063 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: deqingli
+2025-12-02 23:35:27.257 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: deqingli
+2025-12-02 23:35:27.258 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: deqingli
+2025-12-02 23:35:27.260 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: susiwen8
+2025-12-02 23:35:27.465 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: susiwen8
+2025-12-02 23:35:27.466 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: susiwen8
+2025-12-02 23:35:27.467 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: yufeng04
+2025-12-02 23:35:27.668 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: yufeng04
+2025-12-02 23:35:27.668 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yufeng04
+2025-12-02 23:35:27.670 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: loutongbing
+2025-12-02 23:35:27.863 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: loutongbing
+2025-12-02 23:35:27.863 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: loutongbing
+2025-12-02 23:35:27.864 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: jiawulin001
+2025-12-02 23:35:28.062 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: jiawulin001
+2025-12-02 23:35:28.062 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jiawulin001
+2025-12-02 23:35:28.064 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: airflow
+2025-12-02 23:35:28.066 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: airflow
+2025-12-02 23:35:28.435 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: potiuk
+2025-12-02 23:35:28.621 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: potiuk
+2025-12-02 23:35:28.621 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: potiuk
+2025-12-02 23:35:28.623 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kaxil
+2025-12-02 23:35:28.806 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kaxil
+2025-12-02 23:35:28.807 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kaxil
+2025-12-02 23:35:28.808 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-02 23:35:29.003 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mistercrunch
+2025-12-02 23:35:29.003 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-02 23:35:29.005 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ashb
+2025-12-02 23:35:29.201 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ashb
+2025-12-02 23:35:29.201 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ashb
+2025-12-02 23:35:29.202 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mik-laj
+2025-12-02 23:35:29.400 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mik-laj
+2025-12-02 23:35:29.402 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mik-laj
+2025-12-02 23:35:29.404 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: jedcunningham
+2025-12-02 23:35:29.594 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: jedcunningham
+2025-12-02 23:35:29.594 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jedcunningham
+2025-12-02 23:35:29.596 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: amoghrajesh
+2025-12-02 23:35:29.817 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: amoghrajesh
+2025-12-02 23:35:29.818 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: amoghrajesh
+2025-12-02 23:35:29.818 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dstandish
+2025-12-02 23:35:30.009 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dstandish
+2025-12-02 23:35:30.010 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dstandish
+2025-12-02 23:35:30.011 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: eladkal
+2025-12-02 23:35:30.227 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: eladkal
+2025-12-02 23:35:30.228 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: eladkal
+2025-12-02 23:35:30.231 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ephraimbuddy
+2025-12-02 23:35:30.424 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ephraimbuddy
+2025-12-02 23:35:30.425 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ephraimbuddy
+2025-12-02 23:35:30.427 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: spark
+2025-12-02 23:35:30.428 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: spark
+2025-12-02 23:35:30.817 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dongjoon-hyun
+2025-12-02 23:35:31.009 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dongjoon-hyun
+2025-12-02 23:35:31.009 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dongjoon-hyun
+2025-12-02 23:35:31.011 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: HyukjinKwon
+2025-12-02 23:35:31.192 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: HyukjinKwon
+2025-12-02 23:35:31.192 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: HyukjinKwon
+2025-12-02 23:35:31.194 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: zhengruifeng
+2025-12-02 23:35:31.395 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: zhengruifeng
+2025-12-02 23:35:31.396 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: zhengruifeng
+2025-12-02 23:35:31.398 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mateiz
+2025-12-02 23:35:31.601 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mateiz
+2025-12-02 23:35:31.601 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mateiz
+2025-12-02 23:35:31.602 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rxin
+2025-12-02 23:35:31.789 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rxin
+2025-12-02 23:35:31.789 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rxin
+2025-12-02 23:35:31.790 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cloud-fan
+2025-12-02 23:35:31.994 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: cloud-fan
+2025-12-02 23:35:31.994 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cloud-fan
+2025-12-02 23:35:31.995 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: LuciferYang
+2025-12-02 23:35:32.210 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: LuciferYang
+2025-12-02 23:35:32.210 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: LuciferYang
+2025-12-02 23:35:32.212 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: MaxGekk
+2025-12-02 23:35:32.420 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: MaxGekk
+2025-12-02 23:35:32.421 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: MaxGekk
+2025-12-02 23:35:32.422 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: pwendell
+2025-12-02 23:35:32.649 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: pwendell
+2025-12-02 23:35:32.649 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pwendell
+2025-12-02 23:35:32.651 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: yaooqinn
+2025-12-02 23:35:32.871 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: yaooqinn
+2025-12-02 23:35:32.871 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yaooqinn
+2025-12-02 23:35:32.873 [restartedMain] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: kafka
+2025-12-02 23:35:32.875 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: kafka
+2025-12-02 23:35:33.639 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ijuma
+2025-12-02 23:35:33.843 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ijuma
+2025-12-02 23:35:33.844 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ijuma
+2025-12-02 23:35:33.845 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mjsax
+2025-12-02 23:35:34.050 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mjsax
+2025-12-02 23:35:34.051 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mjsax
+2025-12-02 23:35:34.053 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: hachikuji
+2025-12-02 23:35:34.255 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: hachikuji
+2025-12-02 23:35:34.255 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: hachikuji
+2025-12-02 23:35:34.257 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: guozhangwang
+2025-12-02 23:35:34.469 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: guozhangwang
+2025-12-02 23:35:34.470 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: guozhangwang
+2025-12-02 23:35:34.473 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cmccabe
+2025-12-02 23:35:34.668 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: cmccabe
+2025-12-02 23:35:34.668 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cmccabe
+2025-12-02 23:35:34.670 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dajac
+2025-12-02 23:35:34.873 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dajac
+2025-12-02 23:35:34.873 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dajac
+2025-12-02 23:35:34.873 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rajinisivaram
+2025-12-02 23:35:35.083 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rajinisivaram
+2025-12-02 23:35:35.084 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rajinisivaram
+2025-12-02 23:35:35.086 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mimaison
+2025-12-02 23:35:35.288 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mimaison
+2025-12-02 23:35:35.288 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mimaison
+2025-12-02 23:35:35.291 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mumrah
+2025-12-02 23:35:35.489 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mumrah
+2025-12-02 23:35:35.490 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mumrah
+2025-12-02 23:35:35.492 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ableegoldman
+2025-12-02 23:35:35.699 [restartedMain] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ableegoldman
+2025-12-02 23:35:35.700 [restartedMain] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ableegoldman
+2025-12-02 23:35:35.701 [restartedMain] INFO  c.e.g.s.i.DataProcessingServiceImpl - Apache repositories processing completed successfully
+2025-12-02 23:35:35.709 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-02 23:35:35.709 [restartedMain] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-02 23:35:35.709 [restartedMain] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-02 23:36:23.745 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-02 23:36:23.774 [http-nio-8080-exec-1] DEBUG c.e.g.s.impl.RepositoryServiceImpl - Fetching all repositories
+2025-12-02 23:36:49.077 [main] INFO  c.e.g.GitHubApacheApplicationTests - Starting GitHubApacheApplicationTests using Java 17.0.17 with PID 24408 (started by yusuf in C:\Users\yusuf\OneDrive\MasaÃ¼stÃ¼\github-apache)
+2025-12-02 23:36:49.078 [main] DEBUG c.e.g.GitHubApacheApplicationTests - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-02 23:36:49.078 [main] INFO  c.e.g.GitHubApacheApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-02 23:36:52.072 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-02 23:36:52.413 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-02 23:36:52.416 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-02 23:36:52.453 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-02 23:36:53.923 [main] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-02 23:36:54.222 [main] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-02 23:36:55.146 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-02 23:36:57.039 [main] INFO  c.e.g.GitHubApacheApplicationTests - Started GitHubApacheApplicationTests in 8.466 seconds (process running for 14.321)
+2025-12-02 23:36:57.081 [main] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-02 23:36:57.081 [main] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-02 23:36:57.081 [main] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-02 23:36:57.092 [main] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-02 23:36:57.092 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories for org apache perPage 100
+2025-12-02 23:36:59.478 [main] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Repositories fetched: 100
+2025-12-02 23:36:59.480 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-02 23:36:59.617 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: superset
+2025-12-02 23:37:00.284 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-02 23:37:00.493 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mistercrunch
+2025-12-02 23:37:00.493 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-02 23:37:00.529 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-02 23:37:00.703 [main] DEBUG c.e.g.client.GitHubApiClientImpl - User not found dependabot[bot] (404)
+2025-12-02 23:37:00.703 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dependabot[bot]
+2025-12-02 23:37:00.703 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-02 23:37:00.705 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: villebro
+2025-12-02 23:37:00.901 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: villebro
+2025-12-02 23:37:00.901 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: villebro
+2025-12-02 23:37:00.903 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kristw
+2025-12-02 23:37:01.128 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kristw
+2025-12-02 23:37:01.128 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kristw
+2025-12-02 23:37:01.129 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: betodealmeida
+2025-12-02 23:37:01.331 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: betodealmeida
+2025-12-02 23:37:01.332 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: betodealmeida
+2025-12-02 23:37:01.334 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: michael-s-molina
+2025-12-02 23:37:01.535 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: michael-s-molina
+2025-12-02 23:37:01.536 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: michael-s-molina
+2025-12-02 23:37:01.537 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: john-bodley
+2025-12-02 23:37:01.750 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: john-bodley
+2025-12-02 23:37:01.751 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: john-bodley
+2025-12-02 23:37:01.752 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kgabryje
+2025-12-02 23:37:01.941 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kgabryje
+2025-12-02 23:37:01.942 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kgabryje
+2025-12-02 23:37:01.943 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dpgaspar
+2025-12-02 23:37:02.141 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dpgaspar
+2025-12-02 23:37:02.141 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dpgaspar
+2025-12-02 23:37:02.143 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rusackas
+2025-12-02 23:37:02.361 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rusackas
+2025-12-02 23:37:02.361 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rusackas
+2025-12-02 23:37:02.363 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: echarts
+2025-12-02 23:37:02.364 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: echarts
+2025-12-02 23:37:02.962 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: pissang
+2025-12-02 23:37:03.153 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: pissang
+2025-12-02 23:37:03.153 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pissang
+2025-12-02 23:37:03.155 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: 100pah
+2025-12-02 23:37:03.358 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: 100pah
+2025-12-02 23:37:03.358 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: 100pah
+2025-12-02 23:37:03.360 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: Ovilia
+2025-12-02 23:37:03.561 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: Ovilia
+2025-12-02 23:37:03.561 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: Ovilia
+2025-12-02 23:37:03.563 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kener
+2025-12-02 23:37:03.770 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kener
+2025-12-02 23:37:03.771 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kener
+2025-12-02 23:37:03.772 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: plainheart
+2025-12-02 23:37:03.988 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: plainheart
+2025-12-02 23:37:03.988 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: plainheart
+2025-12-02 23:37:03.990 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: deqingli
+2025-12-02 23:37:04.180 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: deqingli
+2025-12-02 23:37:04.181 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: deqingli
+2025-12-02 23:37:04.182 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: susiwen8
+2025-12-02 23:37:04.391 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: susiwen8
+2025-12-02 23:37:04.391 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: susiwen8
+2025-12-02 23:37:04.392 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: yufeng04
+2025-12-02 23:37:04.594 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: yufeng04
+2025-12-02 23:37:04.595 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yufeng04
+2025-12-02 23:37:04.596 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: loutongbing
+2025-12-02 23:37:04.795 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: loutongbing
+2025-12-02 23:37:04.796 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: loutongbing
+2025-12-02 23:37:04.798 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: jiawulin001
+2025-12-02 23:37:04.988 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: jiawulin001
+2025-12-02 23:37:04.988 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jiawulin001
+2025-12-02 23:37:04.990 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: airflow
+2025-12-02 23:37:04.991 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: airflow
+2025-12-02 23:37:05.674 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: potiuk
+2025-12-02 23:37:05.862 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: potiuk
+2025-12-02 23:37:05.862 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: potiuk
+2025-12-02 23:37:05.864 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kaxil
+2025-12-02 23:37:06.057 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kaxil
+2025-12-02 23:37:06.058 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kaxil
+2025-12-02 23:37:06.058 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-02 23:37:06.260 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mistercrunch
+2025-12-02 23:37:06.260 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-02 23:37:06.261 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ashb
+2025-12-02 23:37:06.447 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ashb
+2025-12-02 23:37:06.448 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ashb
+2025-12-02 23:37:06.448 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mik-laj
+2025-12-02 23:37:06.654 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mik-laj
+2025-12-02 23:37:06.655 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mik-laj
+2025-12-02 23:37:06.656 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: jedcunningham
+2025-12-02 23:37:06.858 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: jedcunningham
+2025-12-02 23:37:06.858 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jedcunningham
+2025-12-02 23:37:06.860 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: amoghrajesh
+2025-12-02 23:37:07.069 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: amoghrajesh
+2025-12-02 23:37:07.070 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: amoghrajesh
+2025-12-02 23:37:07.071 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dstandish
+2025-12-02 23:37:07.264 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dstandish
+2025-12-02 23:37:07.264 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dstandish
+2025-12-02 23:37:07.266 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: eladkal
+2025-12-02 23:37:07.468 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: eladkal
+2025-12-02 23:37:07.468 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: eladkal
+2025-12-02 23:37:07.470 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ephraimbuddy
+2025-12-02 23:37:07.661 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ephraimbuddy
+2025-12-02 23:37:07.662 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ephraimbuddy
+2025-12-02 23:37:07.663 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: spark
+2025-12-02 23:37:07.664 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: spark
+2025-12-02 23:37:08.898 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dongjoon-hyun
+2025-12-02 23:37:09.091 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dongjoon-hyun
+2025-12-02 23:37:09.092 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dongjoon-hyun
+2025-12-02 23:37:09.093 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: HyukjinKwon
+2025-12-02 23:37:09.282 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: HyukjinKwon
+2025-12-02 23:37:09.282 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: HyukjinKwon
+2025-12-02 23:37:09.285 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: zhengruifeng
+2025-12-02 23:37:09.475 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: zhengruifeng
+2025-12-02 23:37:09.476 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: zhengruifeng
+2025-12-02 23:37:09.477 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mateiz
+2025-12-02 23:37:09.654 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mateiz
+2025-12-02 23:37:09.655 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mateiz
+2025-12-02 23:37:09.656 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rxin
+2025-12-02 23:37:09.853 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rxin
+2025-12-02 23:37:09.854 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rxin
+2025-12-02 23:37:09.855 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cloud-fan
+2025-12-02 23:37:10.036 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: cloud-fan
+2025-12-02 23:37:10.037 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cloud-fan
+2025-12-02 23:37:10.038 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: LuciferYang
+2025-12-02 23:37:10.294 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: LuciferYang
+2025-12-02 23:37:10.294 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: LuciferYang
+2025-12-02 23:37:10.295 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: MaxGekk
+2025-12-02 23:37:10.487 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: MaxGekk
+2025-12-02 23:37:10.488 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: MaxGekk
+2025-12-02 23:37:10.488 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: pwendell
+2025-12-02 23:37:10.710 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: pwendell
+2025-12-02 23:37:10.711 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pwendell
+2025-12-02 23:37:10.712 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: yaooqinn
+2025-12-02 23:37:10.931 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: yaooqinn
+2025-12-02 23:37:10.932 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yaooqinn
+2025-12-02 23:37:10.933 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: kafka
+2025-12-02 23:37:10.934 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: kafka
+2025-12-02 23:37:11.628 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ijuma
+2025-12-02 23:37:11.829 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ijuma
+2025-12-02 23:37:11.829 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ijuma
+2025-12-02 23:37:11.831 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mjsax
+2025-12-02 23:37:12.024 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mjsax
+2025-12-02 23:37:12.025 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mjsax
+2025-12-02 23:37:12.026 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: hachikuji
+2025-12-02 23:37:12.217 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: hachikuji
+2025-12-02 23:37:12.217 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: hachikuji
+2025-12-02 23:37:12.218 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: guozhangwang
+2025-12-02 23:37:12.410 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: guozhangwang
+2025-12-02 23:37:12.411 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: guozhangwang
+2025-12-02 23:37:12.412 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cmccabe
+2025-12-02 23:37:12.624 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: cmccabe
+2025-12-02 23:37:12.625 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cmccabe
+2025-12-02 23:37:12.626 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dajac
+2025-12-02 23:37:12.833 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dajac
+2025-12-02 23:37:12.833 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dajac
+2025-12-02 23:37:12.834 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rajinisivaram
+2025-12-02 23:37:13.031 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rajinisivaram
+2025-12-02 23:37:13.031 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rajinisivaram
+2025-12-02 23:37:13.032 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mimaison
+2025-12-02 23:37:13.243 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mimaison
+2025-12-02 23:37:13.244 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mimaison
+2025-12-02 23:37:13.245 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mumrah
+2025-12-02 23:37:13.432 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mumrah
+2025-12-02 23:37:13.433 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mumrah
+2025-12-02 23:37:13.434 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ableegoldman
+2025-12-02 23:37:13.640 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ableegoldman
+2025-12-02 23:37:13.640 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ableegoldman
+2025-12-02 23:37:13.641 [main] INFO  c.e.g.s.i.DataProcessingServiceImpl - Apache repositories processing completed successfully
+2025-12-02 23:37:13.885 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-02 23:37:13.887 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-02 23:38:15.320 [main] INFO  c.e.g.GitHubApacheApplicationTests - Starting GitHubApacheApplicationTests using Java 17.0.17 with PID 28440 (started by yusuf in C:\Users\yusuf\OneDrive\MasaÃ¼stÃ¼\github-apache)
+2025-12-02 23:38:15.321 [main] DEBUG c.e.g.GitHubApacheApplicationTests - Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-02 23:38:15.321 [main] INFO  c.e.g.GitHubApacheApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-02 23:38:18.133 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-02 23:38:18.483 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:github_apache_db user=SA
+2025-12-02 23:38:18.486 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-02 23:38:18.523 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-02 23:38:19.951 [main] INFO  c.e.g.config.MetricsConfig - Metrics registry initialized with custom tags
+2025-12-02 23:38:20.238 [main] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-02 23:38:21.118 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-02 23:38:22.867 [main] INFO  c.e.g.GitHubApacheApplicationTests - Started GitHubApacheApplicationTests in 8.061 seconds (process running for 14.167)
+2025-12-02 23:38:22.910 [main] INFO  c.e.g.config.MetricsInitializer - Initializing application metrics...
+2025-12-02 23:38:22.911 [main] INFO  c.e.g.metrics.ProcessingMetrics - Metrics initialized successfully
+2025-12-02 23:38:22.911 [main] INFO  c.e.g.config.MetricsInitializer - Metrics initialization completed
+2025-12-02 23:38:22.921 [main] INFO  c.e.g.s.i.DataProcessingServiceImpl - Starting Apache repositories processing...
+2025-12-02 23:38:22.922 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching repositories for org apache perPage 100
+2025-12-02 23:38:25.122 [main] INFO  c.e.g.s.impl.GitHubApiServiceImpl - Repositories fetched: 100
+2025-12-02 23:38:25.123 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: superset
+2025-12-02 23:38:25.253 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: superset
+2025-12-02 23:38:26.064 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-02 23:38:26.271 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mistercrunch
+2025-12-02 23:38:26.271 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-02 23:38:26.304 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dependabot[bot]
+2025-12-02 23:38:26.471 [main] DEBUG c.e.g.client.GitHubApiClientImpl - User not found dependabot[bot] (404)
+2025-12-02 23:38:26.471 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dependabot[bot]
+2025-12-02 23:38:26.472 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dependabot[bot]
+2025-12-02 23:38:26.473 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: villebro
+2025-12-02 23:38:26.677 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: villebro
+2025-12-02 23:38:26.677 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: villebro
+2025-12-02 23:38:26.679 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kristw
+2025-12-02 23:38:26.986 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kristw
+2025-12-02 23:38:26.986 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kristw
+2025-12-02 23:38:26.988 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: betodealmeida
+2025-12-02 23:38:27.194 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: betodealmeida
+2025-12-02 23:38:27.194 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: betodealmeida
+2025-12-02 23:38:27.195 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: michael-s-molina
+2025-12-02 23:38:27.391 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: michael-s-molina
+2025-12-02 23:38:27.392 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: michael-s-molina
+2025-12-02 23:38:27.393 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: john-bodley
+2025-12-02 23:38:27.592 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: john-bodley
+2025-12-02 23:38:27.592 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: john-bodley
+2025-12-02 23:38:27.594 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kgabryje
+2025-12-02 23:38:27.793 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kgabryje
+2025-12-02 23:38:27.793 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kgabryje
+2025-12-02 23:38:27.795 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dpgaspar
+2025-12-02 23:38:27.992 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dpgaspar
+2025-12-02 23:38:27.992 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dpgaspar
+2025-12-02 23:38:27.994 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rusackas
+2025-12-02 23:38:28.191 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rusackas
+2025-12-02 23:38:28.192 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rusackas
+2025-12-02 23:38:28.193 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: echarts
+2025-12-02 23:38:28.194 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: echarts
+2025-12-02 23:38:28.849 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: pissang
+2025-12-02 23:38:29.034 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: pissang
+2025-12-02 23:38:29.034 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pissang
+2025-12-02 23:38:29.036 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: 100pah
+2025-12-02 23:38:29.271 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: 100pah
+2025-12-02 23:38:29.271 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: 100pah
+2025-12-02 23:38:29.272 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: Ovilia
+2025-12-02 23:38:29.468 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: Ovilia
+2025-12-02 23:38:29.468 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: Ovilia
+2025-12-02 23:38:29.470 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kener
+2025-12-02 23:38:29.672 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kener
+2025-12-02 23:38:29.673 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kener
+2025-12-02 23:38:29.674 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: plainheart
+2025-12-02 23:38:29.855 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: plainheart
+2025-12-02 23:38:29.855 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: plainheart
+2025-12-02 23:38:29.856 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: deqingli
+2025-12-02 23:38:30.051 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: deqingli
+2025-12-02 23:38:30.052 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: deqingli
+2025-12-02 23:38:30.054 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: susiwen8
+2025-12-02 23:38:30.262 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: susiwen8
+2025-12-02 23:38:30.263 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: susiwen8
+2025-12-02 23:38:30.264 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: yufeng04
+2025-12-02 23:38:30.473 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: yufeng04
+2025-12-02 23:38:30.473 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yufeng04
+2025-12-02 23:38:30.475 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: loutongbing
+2025-12-02 23:38:30.685 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: loutongbing
+2025-12-02 23:38:30.686 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: loutongbing
+2025-12-02 23:38:30.687 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: jiawulin001
+2025-12-02 23:38:30.888 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: jiawulin001
+2025-12-02 23:38:30.888 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jiawulin001
+2025-12-02 23:38:30.889 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: airflow
+2025-12-02 23:38:30.890 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: airflow
+2025-12-02 23:38:31.559 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: potiuk
+2025-12-02 23:38:31.777 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: potiuk
+2025-12-02 23:38:31.777 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: potiuk
+2025-12-02 23:38:31.778 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: kaxil
+2025-12-02 23:38:31.975 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: kaxil
+2025-12-02 23:38:31.975 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: kaxil
+2025-12-02 23:38:31.977 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mistercrunch
+2025-12-02 23:38:32.176 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mistercrunch
+2025-12-02 23:38:32.177 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mistercrunch
+2025-12-02 23:38:32.178 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ashb
+2025-12-02 23:38:32.390 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ashb
+2025-12-02 23:38:32.390 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ashb
+2025-12-02 23:38:32.391 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mik-laj
+2025-12-02 23:38:32.631 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mik-laj
+2025-12-02 23:38:32.631 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mik-laj
+2025-12-02 23:38:32.632 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: jedcunningham
+2025-12-02 23:38:32.830 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: jedcunningham
+2025-12-02 23:38:32.831 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: jedcunningham
+2025-12-02 23:38:32.833 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: amoghrajesh
+2025-12-02 23:38:33.040 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: amoghrajesh
+2025-12-02 23:38:33.040 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: amoghrajesh
+2025-12-02 23:38:33.041 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dstandish
+2025-12-02 23:38:33.238 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dstandish
+2025-12-02 23:38:33.239 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dstandish
+2025-12-02 23:38:33.241 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: eladkal
+2025-12-02 23:38:33.430 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: eladkal
+2025-12-02 23:38:33.430 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: eladkal
+2025-12-02 23:38:33.432 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ephraimbuddy
+2025-12-02 23:38:33.672 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ephraimbuddy
+2025-12-02 23:38:33.673 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ephraimbuddy
+2025-12-02 23:38:33.674 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: spark
+2025-12-02 23:38:33.675 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: spark
+2025-12-02 23:38:34.488 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dongjoon-hyun
+2025-12-02 23:38:34.673 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dongjoon-hyun
+2025-12-02 23:38:34.673 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dongjoon-hyun
+2025-12-02 23:38:34.675 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: HyukjinKwon
+2025-12-02 23:38:34.873 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: HyukjinKwon
+2025-12-02 23:38:34.874 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: HyukjinKwon
+2025-12-02 23:38:34.875 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: zhengruifeng
+2025-12-02 23:38:35.065 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: zhengruifeng
+2025-12-02 23:38:35.065 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: zhengruifeng
+2025-12-02 23:38:35.066 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mateiz
+2025-12-02 23:38:35.258 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mateiz
+2025-12-02 23:38:35.258 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mateiz
+2025-12-02 23:38:35.259 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rxin
+2025-12-02 23:38:35.812 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rxin
+2025-12-02 23:38:35.812 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rxin
+2025-12-02 23:38:35.813 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cloud-fan
+2025-12-02 23:38:36.013 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: cloud-fan
+2025-12-02 23:38:36.014 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cloud-fan
+2025-12-02 23:38:36.015 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: LuciferYang
+2025-12-02 23:38:36.212 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: LuciferYang
+2025-12-02 23:38:36.212 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: LuciferYang
+2025-12-02 23:38:36.214 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: MaxGekk
+2025-12-02 23:38:36.612 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: MaxGekk
+2025-12-02 23:38:36.612 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: MaxGekk
+2025-12-02 23:38:36.613 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: pwendell
+2025-12-02 23:38:36.816 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: pwendell
+2025-12-02 23:38:36.816 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: pwendell
+2025-12-02 23:38:36.818 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: yaooqinn
+2025-12-02 23:38:37.024 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: yaooqinn
+2025-12-02 23:38:37.024 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: yaooqinn
+2025-12-02 23:38:37.026 [main] INFO  c.e.g.s.impl.RepositoryServiceImpl - Saving repository: kafka
+2025-12-02 23:38:37.027 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching contributors for repository: kafka
+2025-12-02 23:38:37.664 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ijuma
+2025-12-02 23:38:37.862 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ijuma
+2025-12-02 23:38:37.862 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ijuma
+2025-12-02 23:38:37.863 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mjsax
+2025-12-02 23:38:38.084 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mjsax
+2025-12-02 23:38:38.084 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mjsax
+2025-12-02 23:38:38.085 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: hachikuji
+2025-12-02 23:38:38.288 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: hachikuji
+2025-12-02 23:38:38.288 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: hachikuji
+2025-12-02 23:38:38.289 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: guozhangwang
+2025-12-02 23:38:38.489 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: guozhangwang
+2025-12-02 23:38:38.489 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: guozhangwang
+2025-12-02 23:38:38.490 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: cmccabe
+2025-12-02 23:38:38.694 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: cmccabe
+2025-12-02 23:38:38.694 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: cmccabe
+2025-12-02 23:38:38.695 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: dajac
+2025-12-02 23:38:38.896 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: dajac
+2025-12-02 23:38:38.896 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: dajac
+2025-12-02 23:38:38.897 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: rajinisivaram
+2025-12-02 23:38:39.118 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: rajinisivaram
+2025-12-02 23:38:39.118 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: rajinisivaram
+2025-12-02 23:38:39.119 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mimaison
+2025-12-02 23:38:39.309 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mimaison
+2025-12-02 23:38:39.309 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mimaison
+2025-12-02 23:38:39.310 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: mumrah
+2025-12-02 23:38:39.520 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: mumrah
+2025-12-02 23:38:39.520 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: mumrah
+2025-12-02 23:38:39.522 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - Fetching user details for: ableegoldman
+2025-12-02 23:38:39.728 [main] DEBUG c.e.g.s.impl.GitHubApiServiceImpl - User details retrieved for: ableegoldman
+2025-12-02 23:38:39.728 [main] INFO  c.e.g.s.impl.ContributorServiceImpl - Saving contributor: ableegoldman
+2025-12-02 23:38:39.730 [main] INFO  c.e.g.s.i.DataProcessingServiceImpl - Apache repositories processing completed successfully
+2025-12-02 23:38:39.976 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-02 23:38:39.979 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,7 +1,10 @@
 package com.example.githubapache.controller;
 
+import com.example.githubapache.dto.ContributorResponseDto;
+import com.example.githubapache.dto.RepositoryResponseDto;
 import com.example.githubapache.entity.ContributorEntity;
 import com.example.githubapache.entity.RepositoryEntity;
+import com.example.githubapache.mapper.EntityToDtoMapper;
 import com.example.githubapache.service.ContributorService;
 import com.example.githubapache.service.RepositoryService;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,6 +34,9 @@ class DataControllerTest {
     @Mock
     private ContributorService contributorService;
 
+    @Mock
+    private EntityToDtoMapper entityMapper;
+
     @InjectMocks
     private DataController controller;
 
@@ -45,6 +51,11 @@ class DataControllerTest {
         repo.setId(1L);
         repo.setName("r1");
         when(repositoryService.getAllRepositories()).thenReturn(List.of(repo));
+        
+        RepositoryResponseDto dto = new RepositoryResponseDto();
+        dto.setId(1L);
+        dto.setName("r1");
+        when(entityMapper.toRepositoryDtoList(List.of(repo))).thenReturn(List.of(dto));
 
         mockMvc.perform(get("/api/repositories").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -58,6 +69,12 @@ class DataControllerTest {
         c.setRepositoryName("r1");
         c.setUsername("u1");
         when(contributorService.getContributorsByRepositoryName("r1")).thenReturn(List.of(c));
+        
+        ContributorResponseDto dto = new ContributorResponseDto();
+        dto.setId(1L);
+        dto.setRepositoryName("r1");
+        dto.setUsername("u1");
+        when(entityMapper.toContributorDtoList(List.of(c))).thenReturn(List.of(dto));
 
         mockMvc.perform(get("/api/repositories/{name}/contributors", "r1").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -71,6 +88,12 @@ class DataControllerTest {
         c.setRepositoryName("r1");
         c.setUsername("u1");
         when(contributorService.getAllContributors()).thenReturn(List.of(c));
+        
+        ContributorResponseDto dto = new ContributorResponseDto();
+        dto.setId(1L);
+        dto.setRepositoryName("r1");
+        dto.setUsername("u1");
+        when(entityMapper.toContributorDtoList(List.of(c))).thenReturn(List.of(dto));
 
         mockMvc.perform(get("/api/contributors").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
