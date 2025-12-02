@@ -6,6 +6,7 @@ A layered Spring Boot application that fetches repositories and contributors fro
 - Requirements: Java 17, Maven (wrapper included), internet access
 - Clone and open in VS Code (or any IDE)
 - Create a `.env` file with your GitHub token:
+- To start my github api token is included for faster build you can also use you own
 
 ```
 GITHUB_API_TOKEN=ghp_your_token_here
