@@ -30,14 +30,6 @@ The app starts on `http://localhost:8080`.
 - Logging configured via `logback-spring.xml` with reduced verbosity for frequent API calls.
 - H2 in-memory database used for demo persistence; Spring Data JPA repositories manage entities.
 
-## Architecture Overview
-- Controller returns response DTOs (not entities) via MapStruct.
-- Services orchestrate domain flows, mapping, and persistence.
-- Client layer isolates HTTP calls to GitHub and shields the app from external errors.
-- Metrics collected via Micrometer Prometheus-compatible counters/timers.
-
-
-
 ### Key Packages
 - `controller/` — REST endpoints (e.g., `DataController`).
 - `service/` — Domain services (processing, repository/contributor operations).
