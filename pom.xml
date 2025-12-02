@@ -105,6 +105,13 @@
 			<artifactId>resilience4j-retry</artifactId>
 			<version>2.1.0</version>
 		</dependency>
+
+		<!-- Dotenv for environment variable management -->
+		<dependency>
+			<groupId>me.paulschwarz</groupId>
+			<artifactId>spring-dotenv</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

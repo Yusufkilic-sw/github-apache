@@ -12,9 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 public class MetricsConfig {
 
-    /**
-     * Customize Micrometer MeterRegistry with custom tags and config
-     */
     @Bean
     public MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
         return registry -> {

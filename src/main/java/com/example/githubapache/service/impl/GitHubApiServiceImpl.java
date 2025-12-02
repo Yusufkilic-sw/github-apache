@@ -2,110 +2,66 @@ package com.example.githubapache.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import com.example.githubapache.common.constants.GitHubConstants;
-import com.example.githubapache.common.builder.GitHubRequestBuilder;
+import com.example.githubapache.client.GitHubApiClient;
 import com.example.githubapache.dto.GitHubContributorDto;
 import com.example.githubapache.dto.GitHubRepoDto;
 import com.example.githubapache.dto.GitHubUserDto;
 import com.example.githubapache.service.GitHubApiService;
+import com.example.githubapache.response.GitHubRepoResponse;
+import com.example.githubapache.response.GitHubContributorResponse;
+import com.example.githubapache.response.GitHubUserResponse;
+import com.example.githubapache.mapper.GitHubResponseMapper;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class GitHubApiServiceImpl implements GitHubApiService {
 
-    private final RestTemplate restTemplate;
+    private final GitHubApiClient gitHubApiClient;
+    private final GitHubResponseMapper responseMapper;
     
-    /**
-     * Belirtilen organizasyonun son güncellenen 100 repository'sini getirir
-     */
     public List<GitHubRepoDto> getLatestRepositories(int perPage) {
         try {
-            String url = GitHubRequestBuilder.builder()
-                    .forOrgRepositories()
-                    .organization(GitHubConstants.ORG)
-                    .perPage(perPage)
-                    .sortBy("updated")
-                    .direction("desc")
-                    .build();
-            
-            log.info("Fetching repositories from: {}", url);
-            Objects.requireNonNull(url, "GitHub repos URL must not be null");
-
-            ResponseEntity<List<GitHubRepoDto>> response = restTemplate.exchange(
-                url,
-                Objects.requireNonNull(HttpMethod.GET, "HTTP method must not be null"),
-                null,
-                new ParameterizedTypeReference<List<GitHubRepoDto>>() {}
-            );
-            List<GitHubRepoDto> repos = response.getBody();
-
-            log.info("Retrieved {} repositories", (repos != null ? repos.size() : 0));
-            return repos != null ? repos : List.of();
+            log.debug("Fetching repositories for org {} perPage {}", GitHubConstants.ORG, perPage);
+            List<GitHubRepoResponse> responseList = gitHubApiClient.getOrgRepositories(GitHubConstants.ORG, perPage, "updated", "desc");
+            List<GitHubRepoDto> repos = responseList != null ? responseMapper.toRepoDtoList(responseList) : List.of();
+            log.info("Repositories fetched: {}", repos.size());
+            return repos;
         } catch (Exception e) {
             log.error("Error fetching repositories: ", e);
             return List.of();
         }
     }
     
-
-    /**
-     * Get all contributors for a repository by paging through the API (per_page=100).
-     */
     public List<GitHubContributorDto> getContributors(String repoName) {
         final int perPage = 100;
         final int page = 1;
         try {
-            String url = GitHubRequestBuilder.builder()
-                    .forRepositoryContributors()
-                    .organization(GitHubConstants.ORG)
-                    .repository(repoName)
-                    .perPage(perPage)
-                    .page(page)
-                    .build();
-            
-            log.info("Fetching contributors for repository: {} from: {}", repoName, url);
-            Objects.requireNonNull(url, "GitHub contributors URL must not be null");
-
-            ResponseEntity<List<GitHubContributorDto>> response = restTemplate.exchange(
-                url,
-                Objects.requireNonNull(HttpMethod.GET, "HTTP method must not be null"),
-                null,
-                new ParameterizedTypeReference<List<GitHubContributorDto>>() {}
-            );
-            List<GitHubContributorDto> list = response.getBody();
-            return list != null ? list : List.of();
+            log.debug("Fetching contributors for repository: {}", repoName);
+            List<GitHubContributorResponse> responseList = gitHubApiClient.getRepositoryContributors(GitHubConstants.ORG, repoName, perPage, page);
+            List<GitHubContributorDto> list = responseList != null ? responseList.stream()
+                .map(r -> new GitHubContributorDto(r.getLogin(), r.getAvatarUrl(), r.getProfileUrl(), r.getUrl(), r.getContributions()))
+                .toList() : List.of();
+            return list;
         } catch (Exception e) {
             log.error("Error fetching contributors for {}: ", repoName, e);
             return List.of();
         }
     }
     
-    /**
-     * Belirtilen kullanıcının detaylı bilgilerini getirir
-     */
     public GitHubUserDto getUserDetails(String username) {
         try {
-            String url = GitHubRequestBuilder.builder()
-                    .forUserDetails()
-                    .username(username)
-                    .build();
-            
-            log.info("Fetching user details for: {}", username);
-            Objects.requireNonNull(url, "GitHub user details URL must not be null");
-
-            GitHubUserDto user = restTemplate.getForObject(url, GitHubUserDto.class);
-
-            log.info("Retrieved user details for: {}", username);
+            log.debug("Fetching user details for: {}", username);
+            GitHubUserResponse response = gitHubApiClient.getUserDetails(username);
+            GitHubUserDto user = response != null ?
+                    new GitHubUserDto(response.getLogin(), response.getLocation(), response.getCompany(), response.getName(), response.getProfileUrl()) :
+                    new GitHubUserDto();
+            log.debug("User details retrieved for: {}", username);
             return user;
         } catch (Exception e) {
             log.error("Error fetching user details for {}: ", username, e);

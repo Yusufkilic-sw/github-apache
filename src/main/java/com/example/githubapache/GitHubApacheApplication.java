@@ -16,10 +16,8 @@ public class GitHubApacheApplication {
 
 	@Bean
 	public CommandLineRunner run(DataProcessingService dataProcessingService) {
-		return args -> {
-			System.out.println("Starting GitHub Apache ..");
-			dataProcessingService.processApacheRepositories();
-			System.out.println("Completed - data saved to H2 (in-memory)");
+		return args -> {	
+			dataProcessingService.processApacheRepositories();			
 		};
 	}
 }

@@ -10,9 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-/**
- * HTTP interceptor that adds GitHub Personal Access Token to all API requests
- */
 @Component
 public class GitHubAuthInterceptor implements ClientHttpRequestInterceptor {
 

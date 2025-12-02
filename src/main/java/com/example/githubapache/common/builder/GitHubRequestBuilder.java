@@ -26,13 +26,11 @@ public class GitHubRequestBuilder {
     private final Map<String, String> customParams;
     private RequestType requestType;
     
-    /**
-     * Request type enumeration for different GitHub API endpoints
-     */
+    
     public enum RequestType {
-        ORG_REPOS,          // /orgs/{org}/repos
-        REPO_CONTRIBUTORS,  // /repos/{org}/{repo}/contributors
-        USER_DETAILS        // /users/{username}
+        ORG_REPOS,         
+        REPO_CONTRIBUTORS, 
+        USER_DETAILS        
     }
     
     private GitHubRequestBuilder() {
@@ -106,9 +104,6 @@ public class GitHubRequestBuilder {
         return this;
     }
     
-    /**
-     * Build the complete URL string
-     */
     public String build() {
         if (requestType == null) {
             throw new IllegalStateException("Request type must be specified (forOrgRepositories, forRepositoryContributors, forUserDetails)");
@@ -158,34 +153,29 @@ public class GitHubRequestBuilder {
         String encodedUsername = URLEncoder.encode(username, StandardCharsets.UTF_8);
         url.append( GitHubConstants.BASE_URL).append("/users/").append(encodedUsername);
         
-        // User details endpoint doesn't use query params typically
         return url.toString();
     }
     
     private void appendQueryParams(StringBuilder url) {
         boolean hasParams = false;
         
-        // Always add pagination params for org repos and contributors
         if (requestType == RequestType.ORG_REPOS || requestType == RequestType.REPO_CONTRIBUTORS) {
             url.append("?per_page=").append(perPage);
             url.append("&page=").append(page);
             hasParams = true;
             
-            // Add sorting for org repos
             if (requestType == RequestType.ORG_REPOS && sortBy != null && !sortBy.isBlank()) {
                 url.append("&sort=").append(sortBy);
                 url.append("&direction=").append(direction);
             }
         }
         
-        // Add language filter if specified
         if (filterLanguage != null && !filterLanguage.isBlank()) {
             url.append(hasParams ? "&" : "?");
             url.append("language=").append(URLEncoder.encode(filterLanguage, StandardCharsets.UTF_8));
             hasParams = true;
         }
         
-        // Add any custom parameters
         for (Map.Entry<String, String> entry : customParams.entrySet()) {
             url.append(hasParams ? "&" : "?");
             url.append(entry.getKey()).append("=").append(URLEncoder.encode(entry.getValue(), StandardCharsets.UTF_8));
@@ -193,9 +183,6 @@ public class GitHubRequestBuilder {
         }
     }
     
-    /**
-     * Get the base URL for debugging purposes
-     */
     public String getBaseUrl() {
         return  GitHubConstants.BASE_URL;
     }

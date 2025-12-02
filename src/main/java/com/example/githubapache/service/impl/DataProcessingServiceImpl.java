@@ -61,12 +61,7 @@ public class DataProcessingServiceImpl implements DataProcessingService {
     }
 
     private List<GitHubRepoDto> fetchAllRepositories() {
-        try {
-            return githubApiService.getLatestRepositories(100);
-        } catch (Exception e) {
-            log.error("Error fetching repositories: ", e);
-            return List.of();
-        }
+        return githubApiService.getLatestRepositories(100);
     }
 
     private List<GitHubRepoDto> selectTopRepositories(List<GitHubRepoDto> allRepos, int limit) {
@@ -82,10 +77,9 @@ public class DataProcessingServiceImpl implements DataProcessingService {
             repo.setId(repoDto.getId());
             repositoryService.saveRepository(repo);
             processingMetrics.incrementRepositoriesProcessed();
-
+            
             List<GitHubContributorDto> contributorsAll = fetchContributorsForRepository(repo.getName());
             List<GitHubContributorDto> top10 = selectTopContributors(contributorsAll, 10);
-
             for (GitHubContributorDto contribDto : top10) {
                 processContributor(contribDto, repo.getName());
             }
@@ -96,12 +90,7 @@ public class DataProcessingServiceImpl implements DataProcessingService {
     }
 
     private List<GitHubContributorDto> fetchContributorsForRepository(String repoName) {
-        try {
-            return githubApiService.getContributors(repoName);
-        } catch (Exception e) {
-            log.error("Error fetching contributors for {}: ", repoName, e);
-            return List.of();
-        }
+        return githubApiService.getContributors(repoName);
     }
 
     private List<GitHubContributorDto> selectTopContributors(List<GitHubContributorDto> allContribs, int limit) {
@@ -112,8 +101,8 @@ public class DataProcessingServiceImpl implements DataProcessingService {
     }
 
     private void processContributor(GitHubContributorDto contribDto, String repositoryName) {
+        GitHubUserDto userDto = githubApiService.getUserDetails(contribDto.getLogin());
         try {
-            GitHubUserDto userDto = githubApiService.getUserDetails(contribDto.getLogin());
             ContributorEntity contributor = contributorMapper.toEntity(contribDto, userDto, repositoryName);
             contributorService.saveContributor(contributor);
             processingMetrics.incrementContributorsProcessed();

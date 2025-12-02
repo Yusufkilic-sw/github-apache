@@ -27,22 +27,15 @@ public class RepositoryServiceImpl implements RepositoryService {
     @Override
     @Transactional(readOnly = true)
     public List<RepositoryEntity> getAllRepositories() {
-        log.info("Fetching all repositories");
+        log.debug("Fetching all repositories");
         return repositoryRepository.findAll();
     }
     
     @Override
     @Transactional(readOnly = true)
-    public Optional<RepositoryEntity> getRepositoryByName(String name) {
-        log.info("Fetching repository by name: {}", name);
-        return repositoryRepository.findByName(name);
-    }
-    
-    @Override
-    @Transactional(readOnly = true)
     public Optional<RepositoryEntity> getRepositoryById(Long id) {
-        log.info("Fetching repository by ID: {}", id);
-        return repositoryRepository.findById(id);
+        log.debug("Fetching repository by ID: {}", id);        
+        return id != null ? repositoryRepository.findById(id) : Optional.empty();
     }
     
     @Override

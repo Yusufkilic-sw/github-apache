@@ -10,12 +10,7 @@ import com.example.githubapache.repository.ContributorRepository;
 import com.example.githubapache.service.ContributorService;
 
 import java.util.List;
-import java.util.Optional;
 
-/**
- * Implementation of ContributorService interface
- * Provides access to contributor data with logging and transaction management
- */
 @Service
 @Transactional
 @RequiredArgsConstructor
@@ -27,22 +22,15 @@ public class ContributorServiceImpl implements ContributorService {
     @Override
     @Transactional(readOnly = true)
     public List<ContributorEntity> getAllContributors() {
-        log.info("Fetching all contributors");
+        log.debug("Fetching all contributors");
         return contributorRepository.findAll();
     }
     
     @Override
     @Transactional(readOnly = true)
     public List<ContributorEntity> getContributorsByRepositoryName(String repositoryName) {
-        log.info("Fetching contributors for repository: {}", repositoryName);
+        log.debug("Fetching contributors for repository: {}", repositoryName);
         return contributorRepository.findByRepositoryName(repositoryName);
-    }
-    
-    @Override
-    @Transactional(readOnly = true)
-    public Optional<ContributorEntity> getContributorById(Long id) {
-        log.info("Fetching contributor by ID: {}", id);
-        return contributorRepository.findById(id);
     }
     
     @Override

@@ -4,6 +4,7 @@ import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
 import lombok.RequiredArgsConstructor;
+import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -37,6 +38,13 @@ public class ProcessingMetrics {
                 .register(meterRegistry);
 
         log.info("Metrics initialized successfully");
+    }
+
+    @PostConstruct
+    private void postConstructInit() {
+        if (processingTimer == null) {
+            initialize();
+        }
     }
 
     public void incrementRepositoriesProcessed() {
