@@ -1,6 +1,20 @@
 # GitHub Apache — Spring Boot Case Study
 
-A layered Spring Boot application that fetches repositories and contributors from the GitHub Apache organization, maps API responses to internal DTOs, persists entities in H2
+A layered Spring Boot application that fetches repositories and contributors from the GitHub Apache organization, maps API responses to internal DTOs, persists entities in H2, and exposes clean, response-focused REST endpoints with metrics and structured logging.
+
+## Project Versions
+
+This repository contains two implementations:
+
+1. **Main Project** (root directory) — Spring Boot 3.5.8, JDK 17+, includes REST endpoints and Swagger UI
+2. **Version11** (version11/ directory) — Spring Framework (non-Boot) 6.0.13, JDK 11+, lightweight and compatible
+
+### Which Version to Use?
+
+- **Spring Boot version** (main): Full-featured, modern rapid development, REST API, OpenAPI documentation
+- **Version11**: JDK 11 compatible, Spring Framework only, no controller layer, lightweight, more granular control
+
+See [version11/README.md](version11/README.md) for the Spring Framework version details.
 
 ## Quick Start
 - Requirements: Java 17, Maven (wrapper included), internet access

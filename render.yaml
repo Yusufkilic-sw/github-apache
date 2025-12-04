@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: github-apache
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: GITHUB_API_TOKEN
+        scope: run
+      - key: PORT
+        value: "8080"
